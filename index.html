@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+    
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vridhi Kumar | Personal Website</title>
+    <meta
+      name="description"
+      content="Personal website for Vridhi Kumar with details about me, sports, activities, and travel places."
+    />
+    <style>
+      :root {
+        --bg: #0b1020;
+        --panel: #121a2e;
+        --panel-2: #1a2440;
+        --text: #edf3ff;
+        --muted: #b9c5e0;
+        --accent: #68d5ff;
+        --accent-2: #8cf2c1;
+        --border: rgba(255, 255, 255, 0.08);
+        --shadow: 0 20px 45px rgba(0, 0, 0, 0.25);
+      }
+
+      * { box-sizing: border-box; }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        background: linear-gradient(135deg, var(--bg), #0f172a 30%, #101827 100%);
+        color: var(--text);
+        line-height: 1.6;
+      }
+
+      a {
+        color: var(--accent);
+        text-decoration: none;
+      }
+
+      .container {
+        width: min(1100px, calc(100% - 32px));
+        margin: 0 auto;
+      }
+
+      header {
+        position: sticky;
+        top: 0;
+        z-index: 20;
+        backdrop-filter: blur(12px);
+        background: rgba(11, 16, 32, 0.7);
+        border-bottom: 1px solid var(--border);
+      }
+
+      nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 18px 0;
+      }
+
+      .brand {
+        font-size: 1.3rem;
+        font-weight: 700;
+        letter-spacing: 0.04em;
+      }
+
+      .nav-links {
+        display: flex;
+        gap: 24px;
+        flex-wrap: wrap;
+      }
+
+      .nav-links a {
+        color: var(--muted);
+        font-size: 0.95rem;
+      }
+
+      .hero {
+        padding: 90px 0 60px;
+      }
+
+      .hero-inner {
+        display: grid;
+        grid-template-columns: 1.3fr 0.7fr;
+        gap: 32px;
+        align-items: center;
+      }
+
+      .eyebrow {
+        display: inline-block;
+        padding: 8px 12px;
+        border: 1px solid var(--border);
+        border-radius: 999px;
+        background: rgba(104, 213, 255, 0.08);
+        color: var(--accent);
+        font-size: 0.8rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      h1 {
+        margin: 18px 0 16px;
+        font-size: clamp(2.4rem, 5vw, 4.4rem);
+        line-height: 1.08;
+      }
+
+      .highlight {
+        color: var(--accent);
+      }
+
+      .hero p {
+        font-size: 1.08rem;
+        color: var(--muted);
+        max-width: 650px;
+      }
+
+      .cta-row {
+        margin-top: 26px;
+        display: flex;
+        gap: 14px;
+        flex-wrap: wrap;
+      }
+
+      .button {
+        display: inline-block;
+        padding: 14px 22px;
+        border-radius: 12px;
+        border: 1px solid transparent;
+        font-weight: 700;
+        transition: 0.2s ease;
+      }
+
+      .button.primary {
+        background: linear-gradient(135deg, var(--accent), #7cc7ff);
+        color: #04111f;
+      }
+
+      .button.secondary {
+        border-color: var(--border);
+        color: var(--text);
+        background: rgba(255, 255, 255, 0.02);
+      }
+
+      .profile-card {
+        background: linear-gradient(180deg, var(--panel), var(--panel-2));
+        border: 1px solid var(--border);
+        border-radius: 22px;
+        padding: 26px;
+        box-shadow: var(--shadow);
+      }
+
+      .photo-box {
+        width: 100%;
+        aspect-ratio: 4 / 5;
+        border-radius: 18px;
+        display: grid;
+        place-items: center;
+        background: linear-gradient(135deg, rgba(104, 213, 255, 0.18), rgba(140, 242, 193, 0.12));
+        border: 1px solid var(--border);
+        color: var(--text);
+        font-size: clamp(3rem, 7vw, 5rem);
+        font-weight: 700;
+      }
+
+      .info-list {
+        margin-top: 18px;
+        display: grid;
+        gap: 10px;
+        color: var(--muted);
+      }
+
+      section {
+        padding: 30px 0 70px;
+      }
+
+      .section-heading {
+        margin-bottom: 26px;
+      }
+
+      .section-heading h2 {
+        font-size: clamp(1.8rem, 3vw, 2.7rem);
+        margin: 0 0 8px;
+      }
+
+      .section-heading p {
+        margin: 0;
+        color: var(--muted);
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 22px;
+      }
+
+      .card {
+        background: linear-gradient(180deg, rgba(18, 26, 46, 0.96), rgba(26, 36, 64, 0.96));
+        border: 1px solid var(--border);
+        border-radius: 18px;
+        padding: 24px;
+      }
+
+      .card h3 {
+        margin-top: 0;
+        margin-bottom: 12px;
+        font-size: 1.25rem;
+      }
+
+      .card p,
+      .card li {
+        color: var(--muted);
+      }
+
+      .card ul {
+        margin: 0;
+        padding-left: 18px;
+      }
+
+      .timeline {
+        display: grid;
+        gap: 18px;
+      }
+
+      .timeline-item {
+        display: grid;
+        grid-template-columns: 140px 1fr;
+        gap: 24px;
+        align-items: start;
+        background: rgba(255, 255, 255, 0.02);
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        padding: 18px 20px;
+      }
+
+      .timeline-year {
+        color: var(--accent-2);
+        font-weight: 700;
+      }
+
+      .travel-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 22px;
+      }
+
+      .place {
+        background: linear-gradient(180deg, rgba(18, 26, 46, 0.96), rgba(26, 36, 64, 0.96));
+        border: 1px solid var(--border);
+        border-radius: 18px;
+        overflow: hidden;
+      }
+
+      .place-photo {
+        height: 180px;
+        background: linear-gradient(135deg, rgba(104, 213, 255, 0.28), rgba(140, 242, 193, 0.2));
+        display: grid;
+        place-items: center;
+        font-size: 3rem;
+      }
+
+      .place-body {
+        padding: 18px 20px 22px;
+      }
+
+      .place-body h3 {
+        margin: 0 0 8px;
+      }
+
+      .place-body p {
+        margin: 0;
+        color: var(--muted);
+      }
+
+      footer {
+        padding: 18px 0 50px;
+        color: var(--muted);
+        text-align: center;
+        border-top: 1px solid var(--border);
+      }
+
+      @media (max-width: 800px) {
+        .hero-inner,
+        .grid,
+        .travel-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .timeline-item {
+          grid-template-columns: 1fr;
+          gap: 8px;
+        }
+
+        nav {
+          flex-direction: column;
+          gap: 16px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <nav>
+          <div class="brand">Vridhi Kumar</div>
+          <div class="nav-links">
+            <a href="#about">About</a>
+            <a href="#sports">Sports</a>
+            <a href="#travel">Travel</a>
+            <a href="#contact">Contact</a>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container hero-inner">
+          <div>
+            <span class="eyebrow">Welcome</span>
+            <h1>
+              I am <span class="highlight">Vridhi Kumar</span><br />
+              and I love life, movement, and discovery.
+            </h1>
+            <p>
+              This is my personal website where I share a little about myself,
+              the activities I enjoy, the sports I play, and the places I have
+              traveled to. I am excited to build this space to reflect my journey.
+            </p>
+            <div class="cta-row">
+              <a class="button primary" href="#about">Learn More</a>
+              <a class="button secondary" href="#contact">Get In Touch</a>
+            </div>
+          </div>
+
+          <div class="profile-card">
+            <div class="photo-box">VK</div>
+            <div class="info-list">
+              <div><strong>Name:</strong> Vridhi Kumar</div>
+              <div><strong>Hobby:</strong> Fitness, travel, learning</div>
+              <div><strong>Location:</strong> Your city / country</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="about">
+        <div class="container">
+          <div class="section-heading">
+            <h2>About Me</h2>
+            <p>Let people know who you are, what you value, and what inspires you.</p>
+          </div>
+
+          <div class="grid">
+            <div class="card">
+              <h3>My Story</h3>
+              <p>
+                I am a passionate and energetic person who enjoys learning,
+                staying active, and exploring new experiences. I believe that a
+                balanced life is built through discipline, curiosity, and genuine
+                connection with people.
+              </p>
+            </div>
+
+            <div class="card">
+              <h3>What I Love</h3>
+              <ul>
+                <li>Healthy lifestyle and fitness</li>
+                <li>Travel and cultural discovery</li>
+                <li>Meeting new people and growing</li>
+                <li>Motivation and personal development</li>
+              </ul>
+            </div>
+
+            <div class="card">
+              <h3>My Goals</h3>
+              <p>
+                I want to keep improving myself, stay committed to my passions,
+                and continue making memories through sports, travel, and meaningful
+                experiences.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="sports">
+        <div class="container">
+          <div class="section-heading">
+            <h2>Sports & Activities</h2>
+            <p>Here are the activities I take part in and enjoy the most.</p>
+          </div>
+
+          <div class="grid">
+            <div class="card">
+              <h3>Cricket</h3>
+              <p>
+                I enjoy playing cricket for the energy, teamwork, and excitement it
+                brings. It teaches patience, strategy, and focus.
+              </p>
+            </div>
+
+            <div class="card">
+              <h3>Running / Fitness</h3>
+              <p>
+                I stay active through running, workouts, and a healthy routine that
+                keeps me disciplined and motivated.
+              </p>
+            </div>
+
+            <div class="card">
+              <h3>Other Interests</h3>
+              <ul>
+                <li>Yoga / stretching</li>
+                <li>Outdoor walks</li>
+                <li>Swimming / cycling</li>
+                <li>Adventure activities</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="container">
+          <div class="section-heading">
+            <h2>Journey Highlights</h2>
+            <p>Some of the important milestones in my personal and athletic journey.</p>
+          </div>
+
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-year">2020</div>
+              <div>
+                Started focusing more on fitness and active living, building routines
+                that improved my discipline and confidence.
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-year">2022</div>
+              <div>
+                Participated in regular sports activities and learned the value of
+                teamwork, consistency, and staying motivated.
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-year">Today</div>
+              <div>
+                Continuing to explore new experiences, improve my skills, and travel to
+                new destinations while staying active and inspired.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="travel">
+        <div class="container">
+          <div class="section-heading">
+            <h2>Places I Travel</h2>
+            <p>Some of the destinations that have inspired me and left unforgettable memories.</p>
+          </div>
+
+          <div class="travel-grid">
+            <div class="place">
+              <div class="place-photo">🏞️</div>
+              <div class="place-body">
+                <h3>Hill Station</h3>
+                <p>
+                  A peaceful place full of fresh air, scenic views, and relaxing moments.
+                </p>
+              </div>
+            </div>
+
+            <div class="place">
+              <div class="place-photo">🏖️</div>
+              <div class="place-body">
+                <h3>Beach Destination</h3>
+                <p>
+                  I love the calm waves, golden sunsets, and the feeling of freedom by the sea.
+                </p>
+              </div>
+            </div>
+
+            <div class="place">
+              <div class="place-photo">🏙️</div>
+              <div class="place-body">
+                <h3>City Tour</h3>
+                <p>
+                  Exploring busy streets, local food, and new cultures is always a memorable experience.
+                </p>
+              </div>
+            </div>
+
+            <div class="place">
+              <div class="place-photo">⛰️</div>
+              <div class="place-body">
+                <h3>Adventure Spot</h3>
+                <p>
+                  Trekking and outdoor adventures bring excitement, challenge, and a sense of achievement.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact">
+        <div class="container">
+          <div class="section-heading">
+            <h2>Contact</h2>
+            <p>Feel free to reach out and connect.</p>
+          </div>
+
+          <div class="card">
+            <p>
+              Email: <a href="mailto:yourname@example.com">yourname@example.com</a><br />
+              Phone: <a href="tel:+910000000000">+91 00000 00000</a><br />
+              Instagram: <a href="#">@yourusername</a>
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">© 2026 Vridhi Kumar | Personal Website</div>
+    </footer>
+  </body>
+</html>
