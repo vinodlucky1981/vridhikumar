@@ -12,15 +12,16 @@
     />
     <style>
       :root {
-        --bg: #0b1020;
-        --panel: #121a2e;
-        --panel-2: #1a2440;
-        --text: #edf3ff;
-        --muted: #b9c5e0;
-        --accent: #68d5ff;
-        --accent-2: #8cf2c1;
-        --border: rgba(255, 255, 255, 0.08);
-        --shadow: 0 20px 45px rgba(0, 0, 0, 0.25);
+        --bg: #170a1f;
+        --panel: #2a1338;
+        --panel-2: #1a1a40;
+        --text: #fdf1fb;
+        --muted: #c9a9dd;
+        --accent: #ff3d81;
+        --accent-2: #00e5c7;
+        --accent-3: #a259ff;
+        --border: rgba(255, 255, 255, 0.12);
+        --shadow: 0 20px 45px rgba(255, 61, 129, 0.2);
       }
 
       * { box-sizing: border-box; }
@@ -32,7 +33,7 @@
       body {
         margin: 0;
         font-family: Arial, Helvetica, sans-serif;
-        background: linear-gradient(135deg, var(--bg), #0f172a 30%, #101827 100%);
+        background: linear-gradient(135deg, var(--bg), #1c1745 45%, #062a29 100%);
         color: var(--text);
         line-height: 1.6;
       }
@@ -52,7 +53,7 @@
         top: 0;
         z-index: 20;
         backdrop-filter: blur(12px);
-        background: rgba(11, 16, 32, 0.7);
+        background: rgba(23, 10, 31, 0.75);
         border-bottom: 1px solid var(--border);
       }
 
@@ -100,7 +101,7 @@
 
       .stat {
         min-width: 120px;
-        background: rgba(255, 255, 255, 0.03);
+        background: rgba(255, 255, 255, 0.04);
         border: 1px solid var(--border);
         border-radius: 12px;
         padding: 12px 14px;
@@ -122,7 +123,7 @@
         padding: 8px 12px;
         border: 1px solid var(--border);
         border-radius: 999px;
-        background: rgba(104, 213, 255, 0.08);
+        background: rgba(255, 61, 129, 0.18);
         color: var(--accent);
         font-size: 0.8rem;
         letter-spacing: 0.08em;
@@ -136,7 +137,10 @@
       }
 
       .highlight {
-        color: var(--accent);
+        background: linear-gradient(135deg, var(--accent), var(--accent-3));
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
       }
 
       .hero p {
@@ -162,14 +166,14 @@
       }
 
       .button.primary {
-        background: linear-gradient(135deg, var(--accent), #7cc7ff);
-        color: #04111f;
+        background: linear-gradient(135deg, var(--accent), var(--accent-3));
+        color: #fdf1fb;
       }
 
       .button.secondary {
         border-color: var(--border);
         color: var(--text);
-        background: rgba(255, 255, 255, 0.02);
+        background: rgba(255, 255, 255, 0.04);
       }
 
       .profile-card {
@@ -228,7 +232,7 @@
       }
 
       .card {
-        background: linear-gradient(180deg, rgba(18, 26, 46, 0.96), rgba(26, 36, 64, 0.96));
+        background: linear-gradient(180deg, rgba(54, 42, 61, 0.92), rgba(44, 52, 70, 0.92));
         border: 1px solid var(--border);
         border-radius: 18px;
         padding: 24px;
@@ -260,7 +264,7 @@
         grid-template-columns: 140px 1fr;
         gap: 24px;
         align-items: start;
-        background: rgba(255, 255, 255, 0.02);
+        background: rgba(255, 255, 255, 0.03);
         border: 1px solid var(--border);
         border-radius: 16px;
         padding: 18px 20px;
@@ -278,7 +282,7 @@
       }
 
       .place {
-        background: linear-gradient(180deg, rgba(18, 26, 46, 0.96), rgba(26, 36, 64, 0.96));
+        background: linear-gradient(180deg, rgba(54, 42, 61, 0.92), rgba(44, 52, 70, 0.92));
         border: 1px solid var(--border);
         border-radius: 18px;
         overflow: hidden;
@@ -286,7 +290,7 @@
 
       .place-photo {
         height: 180px;
-        background: linear-gradient(135deg, rgba(104, 213, 255, 0.28), rgba(140, 242, 193, 0.2));
+        background: linear-gradient(135deg, rgba(255, 61, 129, 0.4), rgba(0, 229, 199, 0.32));
         display: grid;
         place-items: center;
         font-size: 3rem;
@@ -414,10 +418,9 @@
             <div class="card">
               <h3>What I Love</h3>
               <ul>
-                <li>Healthy lifestyle and fitness</li>
-                <li>Travel and cultural discovery</li>
-                <li>Meeting new people and growing</li>
-                <li>Motivation and personal development</li>
+                <li>Painting</li>
+                <li>Reading non-fictional books</li>
+                <li>Cooking</li>
               </ul>
             </div>
 
