@@ -3,6 +3,7 @@
   <head>
     
     
+    
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vridhi Kumar | Personal Website</title>
@@ -18,18 +19,19 @@
     />
     <style>
       :root {
-        --bg: #fbdb4e;
-        --panel: #fce797;
-        --panel-2: #fdf3d7;
-        --panel-text: #4a3a05;
-        --panel-muted: #6b5518;
-        --text: #4a3a05;
-        --muted: #7a6530;
-        --accent: #db8b1f;
-        --accent-2: #e8a628;
-        --accent-3: #f5c518;
-        --border: rgba(0, 0, 0, 0.12);
-        --shadow: 0 20px 45px rgba(219, 139, 31, 0.25);
+        --bg: #190019;
+        --bg-2: #2b124c;
+        --panel: #522b5b;
+        --panel-2: #854f6c;
+        --panel-text: #fbe4d8;
+        --panel-muted: #dfb6b2;
+        --text: #fbe4d8;
+        --muted: #dfb6b2;
+        --accent: #854f6c;
+        --accent-2: #dfb6b2;
+        --accent-3: #fbe4d8;
+        --border: rgba(251, 228, 216, 0.16);
+        --shadow: 0 20px 45px rgba(25, 0, 25, 0.45);
       }
 
       * { box-sizing: border-box; }
@@ -41,7 +43,7 @@
       body {
         margin: 0;
         font-family: Arial, Helvetica, sans-serif;
-        background: linear-gradient(135deg, #fce797, var(--bg) 50%, #f5c518 100%);
+        background: linear-gradient(135deg, var(--bg-2), var(--bg) 55%, #0f0010 100%);
         color: var(--text);
         line-height: 1.6;
       }
@@ -61,7 +63,7 @@
         top: 0;
         z-index: 20;
         backdrop-filter: blur(12px);
-        background: rgba(251, 219, 78, 0.85);
+        background: rgba(25, 0, 25, 0.85);
         border-bottom: 1px solid var(--border);
       }
 
@@ -131,8 +133,8 @@
         padding: 8px 12px;
         border: 1px solid var(--border);
         border-radius: 999px;
-        background: rgba(219, 139, 31, 0.16);
-        color: var(--accent);
+        background: rgba(133, 79, 108, 0.35);
+        color: var(--accent-2);
         font-size: 0.8rem;
         letter-spacing: 0.08em;
         text-transform: uppercase;
@@ -185,13 +187,13 @@
 
       .button.primary {
         background: linear-gradient(135deg, var(--accent), var(--accent-3));
-        color: #3a2c05;
+        color: var(--bg);
       }
 
       .button.secondary {
         border-color: var(--border);
         color: var(--text);
-        background: rgba(0, 0, 0, 0.05);
+        background: rgba(251, 228, 216, 0.08);
       }
 
       .profile-card {
@@ -207,7 +209,7 @@
         aspect-ratio: 4 / 5;
         border-radius: 18px;
         overflow: hidden;
-        border: 6px solid #ffffff;
+        border: 6px solid var(--panel-2);
       }
 
       .photo-box img {
@@ -310,7 +312,7 @@
 
       .place-photo {
         height: 180px;
-        background: linear-gradient(135deg, rgba(219, 139, 31, 0.45), rgba(245, 197, 24, 0.4));
+        background: linear-gradient(135deg, rgba(133, 79, 108, 0.5), rgba(223, 182, 178, 0.4));
         display: grid;
         place-items: center;
         font-size: 3rem;
@@ -334,6 +336,35 @@
         margin-bottom: 0;
       }
 
+      .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 18px;
+      }
+
+      .gallery-item {
+        aspect-ratio: 1 / 1;
+        border-radius: 16px;
+        overflow: hidden;
+        border: 1px solid var(--border);
+        background: linear-gradient(135deg, rgba(133, 79, 108, 0.5), rgba(223, 182, 178, 0.4));
+        display: grid;
+        place-items: center;
+        font-size: 2.6rem;
+      }
+
+      .gallery-item img {
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-fit: cover;
+        object-position: center;
+      }
+
+      .contact-link {
+        color: #ffffff;
+      }
+
       footer {
         padding: 18px 0 50px;
         color: var(--muted);
@@ -344,7 +375,8 @@
       @media (max-width: 800px) {
         .hero-inner,
         .grid,
-        .travel-grid {
+        .travel-grid,
+        .gallery-grid {
           grid-template-columns: 1fr;
         }
 
@@ -369,6 +401,7 @@
             <a href="#about">About</a>
             <a href="#sports">Sports</a>
             <a href="#travel">Travel</a>
+            <a href="#gallery">Gallery</a>
             <a href="#contact">Contact</a>
           </div>
         </nav>
@@ -610,6 +643,26 @@
         </div>
       </section>
 
+      <section id="gallery">
+        <div class="container">
+          <div class="section-heading">
+            <h2>Gallery</h2>
+            <p>A few snapshots of my paintings, fitness journey, and travels.</p>
+          </div>
+
+          <div class="gallery-grid">
+            <div class="gallery-item">
+              <img src="photos/WhatsApp%20Image%202026-09-04%20at%2010.53.36%20PM.jpeg" alt="Vridhi Kumar" />
+            </div>
+            <div class="gallery-item">🎨</div>
+            <div class="gallery-item">🏃</div>
+            <div class="gallery-item">🖼️</div>
+            <div class="gallery-item">🧘</div>
+            <div class="gallery-item">📸</div>
+          </div>
+        </div>
+      </section>
+
       <section id="contact">
         <div class="container">
           <div class="section-heading">
@@ -619,8 +672,8 @@
 
           <div class="card">
             <p>
-              Email: <a href="mailto:winnie.ig07@gmail.com">winnie.ig07@gmail.com</a><br />
-              Instagram: <a href="https://instagram.com/Vridhi_ig" target="_blank" rel="noreferrer">@Vridhi_ig</a>
+              Email: <a class="contact-link" href="mailto:winnie.ig07@gmail.com">winnie.ig07@gmail.com</a><br />
+              Instagram: <a class="contact-link" href="https://instagram.com/Vridhi_ig" target="_blank" rel="noreferrer">@Vridhi_ig</a>
             </p>
           </div>
         </div>
