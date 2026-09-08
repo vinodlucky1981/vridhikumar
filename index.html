@@ -320,6 +320,15 @@
         display: grid;
         place-items: center;
         font-size: 3rem;
+        overflow: hidden;
+      }
+
+      .place-photo img {
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-fit: cover;
+        object-position: center;
       }
 
       .place-body {
@@ -518,10 +527,6 @@
                 largest painting was exhibited.
               </p>
               <p>
-                Though COVID interrupted the journey, it never diminished my love for
-                painting.
-              </p>
-              <p>
                 Today, every painting reflects what I observe, imagine, and feel rather
                 than simply completing a picture.
               </p>
@@ -563,15 +568,6 @@
             <div class="card">
               <h3>Part I</h3>
               <p>
-                My reading journey began with <em>Harry Potter and the Goblet of
-                Fire</em>, a book I borrowed from my uncle, simply because
-                everyone around me seemed fascinated by it.
-              </p>
-              <p>
-                Soon, I realised that my curiosity leaned more towards practical
-                ideas, implementation, and understanding human behaviour.
-              </p>
-              <p>
                 My first non-fiction read, <em>The Power of Your Subconscious
                 Mind</em>, completely shifted my perspective on how thoughts
                 shape our actions and mindset.
@@ -581,15 +577,15 @@
                 mind—and that lesson continues to influence how I approach my
                 goals.
               </p>
-            </div>
-
-            <div class="card">
-              <h3>Part II: Discovering My Taste in Books</h3>
               <p>
                 Over time, I discovered that I am drawn to self-development books
                 that explore personal growth, habits, and the psychology behind
                 everyday behaviour.
               </p>
+            </div>
+
+            <div class="card">
+              <h3>Part II: Discovering My Taste in Books</h3>
               <p>
                 One of my favourites, <em>Atomic Habits</em>, explores why certain
                 habits become sustainable while others fail, going beyond advice
@@ -672,7 +668,9 @@
             </div>
 
             <div class="place">
-              <div class="place-photo">🏙️</div>
+              <div class="place-photo">
+                <img src="photos/WhatsApp%20Image%202026-09-06%20at%2011.00.24%20(5).jpeg" alt="Vridhi Kumar at the Gamcheon Culture Village mural in South Korea" />
+              </div>
               <div class="place-body">
                 <h3>South Korea</h3>
                 <p>
@@ -715,11 +713,21 @@
             <div class="gallery-item">
               <img src="photos/WhatsApp%20Image%202026-09-04%20at%2010.53.36%20PM.jpeg" alt="Vridhi Kumar" />
             </div>
-            <div class="gallery-item">🎨</div>
-            <div class="gallery-item">🏃</div>
-            <div class="gallery-item">🖼️</div>
-            <div class="gallery-item">🧘</div>
-            <div class="gallery-item">📸</div>
+            <div class="gallery-item">
+              <img src="photos/WhatsApp%20Image%202026-09-06%20at%2011.00.24%20(1).jpeg" alt="Family in front of lanterns in South Korea" />
+            </div>
+            <div class="gallery-item">
+              <img src="photos/WhatsApp%20Image%202026-09-06%20at%2011.00.24%20(2).jpeg" alt="Vridhi Kumar at a temple entrance in South Korea" />
+            </div>
+            <div class="gallery-item">
+              <img src="photos/WhatsApp%20Image%202026-09-06%20at%2011.00.24%20(3).jpeg" alt="Buddha of Granting a Son statue" />
+            </div>
+            <div class="gallery-item">
+              <img src="photos/WhatsApp%20Image%202026-09-06%20at%2011.00.24%20(4).jpeg" alt="Family in front of a giant golden Buddha statue" />
+            </div>
+            <div class="gallery-item">
+              <img src="photos/WhatsApp%20Image%202026-09-06%20at%2011.00.24%20(5).jpeg" alt="Gamcheon Culture Village mural" />
+            </div>
           </div>
         </div>
       </section>
