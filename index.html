@@ -522,42 +522,36 @@
         color: #ffffff;
       }
 
-      .newsletter-form {
-        display: flex;
-        gap: 12px;
-        flex-wrap: wrap;
-        margin-top: 18px;
+      .editorial-collage {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px;
       }
 
-      .newsletter-form input[type="email"] {
-        flex: 1 1 240px;
-        padding: 14px 16px;
-        border-radius: 12px;
+      .editorial-item {
+        min-height: 300px;
+        border-radius: 16px;
+        overflow: hidden;
         border: 1px solid var(--border);
-        background: rgba(251, 228, 216, 0.08);
-        color: var(--text);
-        font-size: 1rem;
-        font-family: inherit;
+        background: linear-gradient(180deg, var(--panel), var(--panel-2));
+        display: grid;
+        place-items: center;
+        padding: 12px;
       }
 
-      .newsletter-form input[type="email"]::placeholder {
-        color: var(--muted);
+      .editorial-item img {
+        max-width: 100%;
+        max-height: 100%;
+        width: auto;
+        height: auto;
+        object-fit: contain;
+        display: block;
+        border-radius: 8px;
       }
 
-      .newsletter-form input[type="email"]:focus {
-        outline: none;
-        border-color: var(--accent-2);
-      }
-
-      .newsletter-form button {
-        cursor: pointer;
-        font-family: inherit;
-      }
-
-      .newsletter-note {
-        margin-top: 10px;
-        font-size: 0.85rem;
-        color: var(--muted);
+      .editorial-item-wide {
+        grid-column: 1 / -1;
+        min-height: 480px;
       }
 
       footer {
@@ -572,7 +566,8 @@
         .grid,
         .travel-grid,
         .gallery-grid,
-        .community-grid {
+        .community-grid,
+        .editorial-collage {
           grid-template-columns: 1fr;
         }
 
@@ -991,20 +986,22 @@
         <div class="container">
           <div class="section-heading">
             <h2>Editorial Team</h2>
-            <p>Get occasional updates on new posts, trips, and reads.</p>
+            <p>Moments from my time with the school newsletter and editorial team.</p>
           </div>
 
-          <div class="card">
-            <h3>Stay in the loop</h3>
-            <p>
-              Subscribe to hear whenever I share something new here—new
-              travel stories, books I'm reading, or things I'm working on.
-            </p>
-            <form class="newsletter-form" onsubmit="event.preventDefault(); this.querySelector('button').textContent='Thank you for subscribing!';">
-              <input type="email" required placeholder="Enter your email" aria-label="Email address" />
-              <button class="button primary" type="submit">Subscribe</button>
-            </form>
-            <p class="newsletter-note">No spam, ever. Unsubscribe anytime.</p>
+          <div class="editorial-collage">
+            <div class="editorial-item">
+              <img src="photos/editorial-1.png" alt="Editorial team holding newsletter printouts at Indirapuram Public School" />
+            </div>
+            <div class="editorial-item">
+              <img src="photos/editorial-4.png" alt="Editorial team presenting the school newsletter on stage" />
+            </div>
+            <div class="editorial-item editorial-item-wide">
+              <img src="photos/editorial-2.jpg" alt="Newspaper clipping: Experience at NIE, a visit to The Times of India office" />
+            </div>
+            <div class="editorial-item">
+              <img src="photos/editorial-3.png" alt="#AuthorMeet feature with author Ms. Shweta Taneja" />
+            </div>
           </div>
         </div>
       </section>
