@@ -522,6 +522,44 @@
         color: #ffffff;
       }
 
+      .newsletter-form {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+        margin-top: 18px;
+      }
+
+      .newsletter-form input[type="email"] {
+        flex: 1 1 240px;
+        padding: 14px 16px;
+        border-radius: 12px;
+        border: 1px solid var(--border);
+        background: rgba(251, 228, 216, 0.08);
+        color: var(--text);
+        font-size: 1rem;
+        font-family: inherit;
+      }
+
+      .newsletter-form input[type="email"]::placeholder {
+        color: var(--muted);
+      }
+
+      .newsletter-form input[type="email"]:focus {
+        outline: none;
+        border-color: var(--accent-2);
+      }
+
+      .newsletter-form button {
+        cursor: pointer;
+        font-family: inherit;
+      }
+
+      .newsletter-note {
+        margin-top: 10px;
+        font-size: 0.85rem;
+        color: var(--muted);
+      }
+
       footer {
         padding: 18px 0 50px;
         color: var(--muted);
@@ -562,6 +600,7 @@
             <a href="#travel">Travel</a>
             <a href="#gallery">Gallery</a>
             <a href="#community">Community</a>
+            <a href="#newsletter">Newsletter</a>
             <a href="#contact">Contact</a>
           </div>
         </nav>
@@ -944,6 +983,28 @@
                 <a class="contact-link" href="https://nirbhedfoundation.org/" target="_blank" rel="noreferrer">nirbhedfoundation.org</a>.
               </p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="newsletter">
+        <div class="container">
+          <div class="section-heading">
+            <h2>Newsletter</h2>
+            <p>Get occasional updates on new posts, trips, and reads.</p>
+          </div>
+
+          <div class="card">
+            <h3>Stay in the loop</h3>
+            <p>
+              Subscribe to hear whenever I share something new here—new
+              travel stories, books I'm reading, or things I'm working on.
+            </p>
+            <form class="newsletter-form" onsubmit="event.preventDefault(); this.querySelector('button').textContent='Thank you for subscribing!';">
+              <input type="email" required placeholder="Enter your email" aria-label="Email address" />
+              <button class="button primary" type="submit">Subscribe</button>
+            </form>
+            <p class="newsletter-note">No spam, ever. Unsubscribe anytime.</p>
           </div>
         </div>
       </section>
