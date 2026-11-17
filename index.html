@@ -563,6 +563,42 @@
         line-height: 1.6;
       }
 
+      .achievement-grid {
+        display: grid;
+        grid-template-columns: 1.1fr 1fr;
+        gap: 22px;
+        align-items: center;
+      }
+
+      .achievement-certificate {
+        display: block;
+        background: #ffffff;
+        border: 1px solid var(--border);
+        border-radius: 18px;
+        padding: 12px;
+        box-shadow: var(--shadow);
+        transition: transform 0.2s ease;
+      }
+
+      .achievement-certificate:hover {
+        transform: translateY(-4px);
+      }
+
+      .achievement-certificate img {
+        width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 8px;
+      }
+
+      .achievement-story .eyebrow {
+        margin-bottom: 12px;
+      }
+
+      .achievement-story ul {
+        margin-bottom: 20px;
+      }
+
       footer {
         padding: 18px 0 50px;
         color: var(--muted);
@@ -576,6 +612,7 @@
         .travel-grid,
         .gallery-grid,
         .community-grid,
+        .achievement-grid,
         .editorial-collage {
           grid-template-columns: 1fr;
         }
@@ -599,6 +636,7 @@
           <div class="brand">Vridhi Kumar</div>
           <div class="nav-links">
             <a href="#reading">Reading</a>
+            <a href="#achievements">Achievements</a>
             <a href="#travel">Travel</a>
             <a href="#gallery">Gallery</a>
             <a href="#community">Community</a>
@@ -751,6 +789,44 @@
               <div>
                 Continuing to explore new experiences, improve my skills, and travel to
                 new destinations while staying active and inspired.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="achievements">
+        <div class="container">
+          <div class="section-heading">
+            <h2>Achievements</h2>
+            <p>Milestones that reflect my curiosity, effort, and love for learning.</p>
+          </div>
+
+          <div class="achievement-grid">
+            <a class="achievement-certificate" href="photos/cs50x-certificate.pdf" target="_blank" rel="noreferrer">
+              <img src="photos/cs50x-certificate.png" alt="CS50 Certificate awarded to Vridhi Kumar for completing CS50x: Introduction to Computer Science, Harvard University, 2026" />
+            </a>
+
+            <div class="card achievement-story">
+              <span class="eyebrow">Harvard University · 2026</span>
+              <h3>CS50x: Introduction to Computer Science</h3>
+              <p>
+                I completed Harvard University's CS50x, one of the world's most
+                popular introductory computer science courses, taught by
+                Professor David J. Malan.
+              </p>
+              <ul>
+                <li>Completed ten problem sets covering C, Python, SQL, HTML, CSS, and JavaScript.</li>
+                <li>
+                  Built my final project, a <strong>School Attendance System</strong>
+                  that marks students present using facial recognition, inspired by
+                  the time my teachers spent taking attendance by hand every morning.
+                </li>
+                <li>Learned to break big problems into small steps and keep going when code doesn't work the first time.</li>
+              </ul>
+              <div class="cta-row">
+                <a class="button primary" href="https://cs50.harvard.edu/certificates/38bb0df1-7f78-4e87-a7c1-dbeb669c98fc" target="_blank" rel="noreferrer">Verify Certificate</a>
+                <a class="button secondary" href="photos/cs50x-certificate.pdf" target="_blank" rel="noreferrer">View PDF</a>
               </div>
             </div>
           </div>
