@@ -379,62 +379,15 @@
         font-weight: 700;
       }
 
-      .travel-grid {
-        display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 22px;
-      }
 
-      .place {
-        background: linear-gradient(180deg, var(--panel), var(--panel-2));
-        border: 1px solid var(--border);
-        border-radius: 18px;
-        overflow: hidden;
-      }
 
-      .place-photo {
-        height: 180px;
-        background: linear-gradient(135deg, rgba(133, 79, 108, 0.5), rgba(223, 182, 178, 0.4));
-        display: grid;
-        place-items: center;
-        font-size: 3rem;
-        overflow: hidden;
-      }
 
-      .place-photo img {
-        width: 100%;
-        height: 100%;
-        display: block;
-        object-fit: cover;
-        object-position: center;
-      }
 
-      .place-photo.place-photo-auto {
-        height: auto;
-      }
 
-      .place-photo-auto img {
-        height: auto;
-        object-fit: contain;
-      }
 
-      .place-body {
-        padding: 18px 20px 22px;
-      }
 
-      .place-body h3 {
-        margin: 0 0 8px;
-        color: var(--panel-text);
-      }
 
-      .place-body p {
-        margin: 0 0 12px;
-        color: var(--panel-muted);
-      }
 
-      .place-body p:last-child {
-        margin-bottom: 0;
-      }
 
       .gallery-grid {
         display: grid;
@@ -609,7 +562,6 @@
       @media (max-width: 800px) {
         .hero-inner,
         .grid,
-        .travel-grid,
         .gallery-grid,
         .community-grid,
         .achievement-grid,
@@ -637,7 +589,6 @@
           <div class="nav-links">
             <a href="#reading">Reading</a>
             <a href="#achievements">Achievements</a>
-            <a href="#travel">Travel</a>
             <a href="#gallery">Gallery</a>
             <a href="#community">Community</a>
             <a href="#newsletter">Editorial Team</a>
@@ -833,68 +784,6 @@
         </div>
       </section>
 
-      <section id="travel">
-        <div class="container">
-          <div class="section-heading">
-            <h2>Places I Travel</h2>
-            <p>Some of the destinations that have inspired me and left unforgettable memories.</p>
-          </div>
-
-          <div class="travel-grid">
-            <div class="place">
-              <div class="place-photo">🏞️</div>
-              <div class="place-body">
-                <h3>Hill Station</h3>
-                <p>
-                  A peaceful place full of fresh air, scenic views, and relaxing moments.
-                </p>
-              </div>
-            </div>
-
-            <div class="place">
-              <div class="place-photo">🏖️</div>
-              <div class="place-body">
-                <h3>Beach Destination</h3>
-                <p>
-                  I love the calm waves, golden sunsets, and the feeling of freedom by the sea.
-                </p>
-              </div>
-            </div>
-
-            <div class="place">
-              <div class="place-photo place-photo-auto">
-                <img src="photos/WhatsApp%20Image%202026-09-06%20at%2011.00.24%20(5).jpeg" alt="Vridhi Kumar at the Gamcheon Culture Village mural in South Korea" />
-              </div>
-              <div class="place-body">
-                <h3>South Korea</h3>
-                <p>
-                  My first international trip, in Spring 2024, reshaped how I see
-                  technology, discipline, and culture. Our guide arrived five minutes
-                  early every single day, and everywhere we went, working people and
-                  schoolchildren chose to walk or take the subway over driving—a
-                  reminder that health and fitness are valued as part of everyday life.
-                </p>
-                <p>
-                  Visiting the temples was mesmerising, each one carrying its own story
-                  and significance, and it was the warmth of the people that made the
-                  country feel truly homely and safe, leaving me with memories to
-                  cherish.
-                </p>
-              </div>
-            </div>
-
-            <div class="place">
-              <div class="place-photo">⛰️</div>
-              <div class="place-body">
-                <h3>Adventure Spot</h3>
-                <p>
-                  Trekking and outdoor adventures bring excitement, challenge, and a sense of achievement.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       <section id="gallery">
         <div class="container">
